@@ -1,0 +1,15 @@
+<div class = "d-flex .flex-column ">
+  <div>
+    <h1> My Restaurants </h1>
+  </div>
+  <div>
+    <% @restaurants.each do |restaurant| %>
+      <div>
+        <h3><%= link_to restaurant.name, restaurant_path(restaurant)  %></h3>
+        <!-- <h2><%= restaurant.name %></h2> -->
+        <p><%= restaurant.address %></p>
+        <p><%= restaurant.category %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
